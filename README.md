@@ -1,7 +1,6 @@
 # OAuth 2 Endpoints for Restify
 
-This package provides a *very simple* OAuth 2.0 endpoint for the [Restify][] framework. In particular, it implements
-the [Client Credentials][cc] and [Resource Owner Password Credentials][ropc] flows only.
+本报为[Restify][]框架提供一个*非常简单*的OAuth 2.0 终端. 特别是, 它只实现了[客户端凭证][cc]和[资源所有者密码认证][ropc] 流量.
 
 ## 你会得到什么
 
@@ -40,8 +39,7 @@ restifyOAuth2.cc(server, options);
 restifyOAuth2.ropc(server, options);
 ```
 
-Unfortunately, Restify–OAuth2 can't be a simple Restify plugin. It needs to install a route for the token
-endpoint, whereas plugins simply run on every request and don't modify the server's routing table.
+不幸的是, Restify–OAuth2不能成为一个简单的Restify插件. 它需要为令牌终端安装一个路由,而插件只是在每次请求时运行，不修改服务器的路由表.
 
 ## 选项
 
