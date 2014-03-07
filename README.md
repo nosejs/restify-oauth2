@@ -3,7 +3,7 @@
 This package provides a *very simple* OAuth 2.0 endpoint for the [Restify][] framework. In particular, it implements
 the [Client Credentials][cc] and [Resource Owner Password Credentials][ropc] flows only.
 
-## What You Get
+## 你会得到什么
 
 If you provide Restify–OAuth2 with the appropriate hooks, it will:
 
@@ -21,7 +21,7 @@ If you provide Restify–OAuth2 with the appropriate hooks, it will:
   * If the user tries to access a protected resource, you can use Restify–OAuth2's `res.sendUnauthorized()` to send
     appropriate 401 errors with helpful `WWW-Authenticate` and `Link` headers.
 
-## Use and Configuration
+## 使用和配置
 
 To use Restify–OAuth2, you'll need to pass it your server plus some options, including the hooks discussed below.
 Restify–OAuth2 also depends on the built-in `authorizationParser` and `bodyParser` plugins, the latter with `mapParams`
@@ -43,7 +43,7 @@ restifyOAuth2.ropc(server, options);
 Unfortunately, Restify–OAuth2 can't be a simple Restify plugin. It needs to install a route for the token
 endpoint, whereas plugins simply run on every request and don't modify the server's routing table.
 
-## Options
+## 选项
 
 The options you pass to Restify–OAuth2 depend heavily on which of the two flows you are choosing. There are some
 options common to both flows, but the `options.hooks` hash will vary depending on the flow. Once you provide the
@@ -71,7 +71,7 @@ Checks that a token is valid, i.e. that it was granted in the past by `grantClie
 client ID for that token if so, or `false` if the token is invalid. It can also call back with an error if there
 was some internal server error while looking up the token.
 
-### Resource Owner Password Credentials Hooks
+### 资源所有者密码证书挂钩
 
 The idea behind this OAuth 2 flow is that your API clients will prompt the user for their username and password, and
 send those to your API in exchange for an access token. This has some advantages over simply sending the user's
@@ -101,7 +101,7 @@ Checks that a token is valid, i.e. that it was granted in the past by `grantUser
 username for that token if so, or `false` if the token is invalid. It can also call back with an error if there
 was some internal server error while looking up the token.
 
-### Other Options
+### 其他操作
 
 The `hooks` hash is the only required option, but the following are also available for tweaking:
 
